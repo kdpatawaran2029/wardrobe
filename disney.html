@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney Collection &ndash; Aurevienne</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="disney.css">
+</head>
+<body>
+<nav>
+  <div class="logo">Aurevienne</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="disney.html" class="active">Disney</a>
+    <a href="bridgerton.html">Bridgerton</a>
+    <a href="mythology.html">Mythology</a>
+    <a href="gothic.html">Gothic</a>
+    <a href="about.html">About</a>
+  </div>
+  <button class="cart-btn" onclick="openCart()">
+    Bag (<span id="cart-count">0</span>)
+  </button>
+</nav>
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-top">
+    <h3>Your Bag</h3>
+    <button onclick="closeCart()">&#x2715;</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="total-price">&#8369;0</strong>
+    </div>
+    <button class="checkout-btn" onclick="document.getElementById('checkout-form-wrap').classList.toggle('show')">Checkout</button>
+    <div class="checkout-form-wrap" id="checkout-form-wrap">
+      <form action="http://52.74.133.173/cs3/checkout.php" method="GET">
+        <input type="text" name="cust_name" id="cust_name" placeholder="Full Name" required>
+        <input type="email" name="cust_email" id="cust_email" placeholder="Email Address" required>
+        <input type="text" name="cust_addr" id="cust_addr" placeholder="Delivery Address" required>
+        <input type="hidden" name="cust_order" id="cust_order" value="[]">
+        <button type="submit" class="place-order-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="tag">AUREVIENNE &mdash; DISNEY</p>
+    <h1>Once Upon<br><em>a Gown</em></h1>
+    <p class="sub">Princess-inspired couture for your fairytale moment.</p>
+    <a href="about.html" class="btn">ABOUT</a>
+  </div>
+</section>
+
+<div class="shop-intro">
+  <p class="tag">DISNEY COLLECTION</p>
+  <h2>Princess Couture</h2>
+  <p>A tribute to the princesses who shaped our dreams. Each gown is inspired by the magic, elegance, and story of your favourite Disney heroine.</p>
+</div>
+
+<div class="dress-grid">
+
+  <div class="dress-card">
+    <div class="dress-img cinde-1">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Midnight Spell Ballgown">
+      <button class="quick-add" onclick="addToCart(this,'Midnight Spell Ballgown',7200)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Cinderella</span>
+      <h3>Midnight Spell Ballgown</h3>
+      <span class="dress-price">&#8369;7,200</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img cinde-2">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Glass Slipper Blue Gown">
+      <button class="quick-add" onclick="addToCart(this,'Glass Slipper Blue Gown',6500)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Cinderella</span>
+      <h3>Glass Slipper Blue Gown</h3>
+      <span class="dress-price">&#8369;6,500</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img cinde-3">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Bibbidi Tulle Dress">
+      <button class="quick-add" onclick="addToCart(this,'Bibbidi Tulle Dress',5900)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Cinderella</span>
+      <h3>Bibbidi Tulle Dress</h3>
+      <span class="dress-price">&#8369;5,900</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img cinde-4">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Pumpkin Carriage Gown">
+      <button class="quick-add" onclick="addToCart(this,'Pumpkin Carriage Gown',6800)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Cinderella</span>
+      <h3>Pumpkin Carriage Gown</h3>
+      <span class="dress-price">&#8369;6,800</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img cinde-5">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Starlight Waltz Dress">
+      <button class="quick-add" onclick="addToCart(this,'Starlight Waltz Dress',7500)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Cinderella</span>
+      <h3>Starlight Waltz Dress</h3>
+      <span class="dress-price">&#8369;7,500</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img aurora-1">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Briar Rose Pink Gown">
+      <button class="quick-add" onclick="addToCart(this,'Briar Rose Pink Gown',6200)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Aurora</span>
+      <h3>Briar Rose Pink Gown</h3>
+      <span class="dress-price">&#8369;6,200</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img aurora-2">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Enchanted Slumber Gown">
+      <button class="quick-add" onclick="addToCart(this,'Enchanted Slumber Gown',5600)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Aurora</span>
+      <h3>Enchanted Slumber Gown</h3>
+      <span class="dress-price">&#8369;5,600</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img aurora-3">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="True Love Kiss Gown">
+      <button class="quick-add" onclick="addToCart(this,'True Love Kiss Gown',7000)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Aurora</span>
+      <h3>True Love Kiss Gown</h3>
+      <span class="dress-price">&#8369;7,000</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img aurora-4">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Spindle Tower Dress">
+      <button class="quick-add" onclick="addToCart(this,'Spindle Tower Dress',6400)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Aurora</span>
+      <h3>Spindle Tower Dress</h3>
+      <span class="dress-price">&#8369;6,400</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img aurora-5">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Fairy Godmother Blessing">
+      <button class="quick-add" onclick="addToCart(this,'Fairy Godmother Blessing',5800)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Aurora</span>
+      <h3>Fairy Godmother Blessing</h3>
+      <span class="dress-price">&#8369;5,800</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img belle-1">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/3f443602fb10383f7cdd2094ddc02870cab1bb0d/goth.png" alt="Enchanted Rose Ballgown">
+      <button class="quick-add" onclick="addToCart(this,'Enchanted Rose Ballgown',7800)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Belle</span>
+      <h3>Enchanted Rose Ballgown</h3>
+      <span class="dress-price">&#8369;7,800</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img belle-2">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/3f443602fb10383f7cdd2094ddc02870cab1bb0d/goth.png" alt="Beast Library Gown">
+      <button class="quick-add" onclick="addToCart(this,'Beast Library Gown',6300)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Belle</span>
+      <h3>Beast Library Gown</h3>
+      <span class="dress-price">&#8369;6,300</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img belle-3">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/3f443602fb10383f7cdd2094ddc02870cab1bb0d/goth.png" alt="Lumiere Golden Dress">
+      <button class="quick-add" onclick="addToCart(this,'Lumiere Golden Dress',5700)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Belle</span>
+      <h3>Lumiere Golden Dress</h3>
+      <span class="dress-price">&#8369;5,700</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img belle-4">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/3f443602fb10383f7cdd2094ddc02870cab1bb0d/goth.png" alt="Provincial Morning Dress">
+      <button class="quick-add" onclick="addToCart(this,'Provincial Morning Dress',4900)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Belle</span>
+      <h3>Provincial Morning Dress</h3>
+      <span class="dress-price">&#8369;4,900</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img belle-5">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/3f443602fb10383f7cdd2094ddc02870cab1bb0d/goth.png" alt="Tale as Old as Time Gown">
+      <button class="quick-add" onclick="addToCart(this,'Tale as Old as Time Gown',8200)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Belle</span>
+      <h3>Tale as Old as Time Gown</h3>
+      <span class="dress-price">&#8369;8,200</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img ariel-1">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Under the Sea Gown">
+      <button class="quick-add" onclick="addToCart(this,'Under the Sea Gown',6600)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Ariel</span>
+      <h3>Under the Sea Gown</h3>
+      <span class="dress-price">&#8369;6,600</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img ariel-2">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Coral Reef Mermaid Dress">
+      <button class="quick-add" onclick="addToCart(this,'Coral Reef Mermaid Dress',7100)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Ariel</span>
+      <h3>Coral Reef Mermaid Dress</h3>
+      <span class="dress-price">&#8369;7,100</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img ariel-3">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Triton Daughter Gown">
+      <button class="quick-add" onclick="addToCart(this,'Triton Daughter Gown',5400)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Ariel</span>
+      <h3>Triton Daughter Gown</h3>
+      <span class="dress-price">&#8369;5,400</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img ariel-4">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Part of Your World Dress">
+      <button class="quick-add" onclick="addToCart(this,'Part of Your World Dress',6000)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Ariel</span>
+      <h3>Part of Your World Dress</h3>
+      <span class="dress-price">&#8369;6,000</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img ariel-5">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Sea Witch Siren Gown">
+      <button class="quick-add" onclick="addToCart(this,'Sea Witch Siren Gown',7400)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Ariel</span>
+      <h3>Sea Witch Siren Gown</h3>
+      <span class="dress-price">&#8369;7,400</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img rapunzel-1">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Golden Tower Gown">
+      <button class="quick-add" onclick="addToCart(this,'Golden Tower Gown',6100)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Rapunzel</span>
+      <h3>Golden Tower Gown</h3>
+      <span class="dress-price">&#8369;6,100</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img rapunzel-2">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Lantern Float Dress">
+      <button class="quick-add" onclick="addToCart(this,'Lantern Float Dress',5500)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Rapunzel</span>
+      <h3>Lantern Float Dress</h3>
+      <span class="dress-price">&#8369;5,500</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img rapunzel-3">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Sun Kingdom Gown">
+      <button class="quick-add" onclick="addToCart(this,'Sun Kingdom Gown',6700)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Rapunzel</span>
+      <h3>Sun Kingdom Gown</h3>
+      <span class="dress-price">&#8369;6,700</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img rapunzel-4">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Pascal Garden Dress">
+      <button class="quick-add" onclick="addToCart(this,'Pascal Garden Dress',5300)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Rapunzel</span>
+      <h3>Pascal Garden Dress</h3>
+      <span class="dress-price">&#8369;5,300</span>
+    </div>
+  </div>
+
+  <div class="dress-card">
+    <div class="dress-img rapunzel-5">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Ever After Braid Gown">
+      <button class="quick-add" onclick="addToCart(this,'Ever After Braid Gown',6900)">+ Add to Bag</button>
+    </div>
+    <div class="dress-info">
+      <span class="dress-princess">Rapunzel</span>
+      <h3>Ever After Braid Gown</h3>
+      <span class="dress-price">&#8369;6,900</span>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p class="logo">Aurevienne</p>
+  <p class="tag">Gato, Patawaran, Ruiz</p>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>

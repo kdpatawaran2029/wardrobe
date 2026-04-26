@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurevienne &ndash; Where Fantasy Becomes Fashion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="logo">Aurevienne</div>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="disney.html">Disney</a>
+    <a href="bridgerton.html">Bridgerton</a>
+    <a href="mythology.html">Mythology</a>
+    <a href="gothic.html">Gothic</a>
+    <a href="about.html">About</a>
+  </div>
+  <button class="cart-btn" onclick="openCart()">
+    Bag (<span id="cart-count">0</span>)
+  </button>
+</nav>
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-top">
+    <h3>Your Bag</h3>
+    <button onclick="closeCart()">&#x2715;</button>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="total-price">&#8369;0</strong>
+    </div>
+    <button class="checkout-btn" onclick="document.getElementById('checkout-form-wrap').classList.toggle('show')">Checkout</button>
+    <div class="checkout-form-wrap" id="checkout-form-wrap">
+      <form action="http://52.74.133.173/cs3/checkout.php" method="GET">
+        <input type="text" name="cust_name" id="cust_name" placeholder="Full Name" required>
+        <input type="email" name="cust_email" id="cust_email" placeholder="Email Address" required>
+        <input type="text" name="cust_addr" id="cust_addr" placeholder="Delivery Address" required>
+        <input type="hidden" name="cust_order" id="cust_order" value="[]">
+        <button type="submit" class="place-order-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+</div>
+<section class="hero">
+  <div class="hero-text">
+    <p class="tag">AUREVIENNE</p>
+    <h1>Where Fantasy<br><em>Becomes Fashion</em></h1>
+    <p class="sub">Enchanting gowns for the dreamers.</p>
+    <a href="#" class="btn">ABOUT</a>
+  </div>
+</section>
+<section class="section">
+  <p class="tag">Themes</p>
+  <h2>Our Collections</h2>
+  <div class="col-grid">
+    <div class="col-card">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/652b1fdd2ec381eae8551b2bf89f51779998b0f7/3.png" alt="Disney Collection" class="col-img">
+    </div>
+    <div class="col-card">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/652b1fdd2ec381eae8551b2bf89f51779998b0f7/5.png" alt="Bridgerton Collection" class="col-img">
+    </div>
+    <div class="col-card">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/652b1fdd2ec381eae8551b2bf89f51779998b0f7/4.png" alt="Mythology Collection" class="col-img">
+    </div>
+    <div class="col-card">
+      <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/652b1fdd2ec381eae8551b2bf89f51779998b0f7/2.png" alt="Gothic Collection" class="col-img">
+    </div>
+  </div>
+</section>
+<section class="section cream">
+  <p class="tag">Handpicked</p>
+  <h2>Featured Dresses</h2>
+  <div class="prod-grid">
+    <div class="prod-card">
+      <div class="prod-img" style="background:#ede0f5;">
+        <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/e4c5800f58452694806a6113667831c51a828b14/cinde.png" alt="Cinderella Aurora Veil">
+      </div>
+      <div class="prod-info">
+        <h3>Cinderella&apos;s Aurora Veil</h3>
+        <div class="prod-foot">
+          <span>&#8369;6,700</span>
+          <button onclick="addToCart(this,&quot;Cinderella&apos;s Aurora Veil&quot;,6700)">Add to Bag</button>
+        </div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img" style="background:#f5e8fb;">
+        <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/3f443602fb10383f7cdd2094ddc02870cab1bb0d/goth.png" alt="Ebon Whisper Gothic Gown">
+      </div>
+      <div class="prod-info">
+        <h3>Ebon Whisper Gothic Gown</h3>
+        <div class="prod-foot">
+          <span>&#8369;5,800</span>
+          <button onclick="addToCart(this,&quot;Ebon Whisper Gothic Gown&quot;,5800)">Add to Bag</button>
+        </div>
+      </div>
+    </div>
+    <div class="prod-card">
+      <div class="prod-img" style="background:#2a1a35;">
+        <img src="https://raw.githubusercontent.com/kdpatawaran2029/kdpatawaran/f521bca7fdba5690b626c9de7ecdb69f16ea8d66/royal.png" alt="Celeste Crown Dress">
+      </div>
+      <div class="prod-info">
+        <h3>Celeste Crown Dress</h3>
+        <div class="prod-foot">
+          <span>&#8369;5,000</span>
+          <button onclick="addToCart(this,&quot;Celeste Crown Dress&quot;,5000)">Add to Bag</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p class="logo">Aurevienne</p>
+  <p class="tag">Gato, Patawaran, Ruiz</p>
+</footer>
+<script src="cart.js"></script>
+</body>
+</html>
