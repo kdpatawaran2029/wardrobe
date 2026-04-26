@@ -391,7 +391,138 @@ nav{
 .checkout-btn:hover{
   background:#7c4d8a;
 }
+.cinde-1{ background:#d8eaf8; }
+.cinde-2{ background:#e8f3fc; }
+.cinde-3{ background:#cce5f8; }
+.cinde-4{ background:#b8daf5; }
+.cinde-5{ background:#d0e8f7; }
+.aurora-1{ background:#f9e8f2; }
+.aurora-2{ background:#ecd5f5; }
+.aurora-3{ background:#f4dff0; }
+.aurora-4{ background:#f8e2f2; }
+.aurora-5{ background:#f0d8ee; }
+.belle-1{ background:#fdf3d0; }
+.belle-2{ background:#fbeec5; }
+.belle-3{ background:#f9ecc0; }
+.belle-4{ background:#fce8b5; }
+.belle-5{ background:#f7e8a8; }
+.ariel-1{ background:#c8eef5; }
+.ariel-2{ background:#afe8f0; }
+.ariel-3{ background:#bce8f2; }
+.ariel-4{ background:#9de0ef; }
+.ariel-5{ background:#c4edf5; }
+.rapunzel-1{ background:#f5f0d0; }
+.rapunzel-2{ background:#ede8c5; }
+.rapunzel-3{ background:#e8e2b8; }
+.rapunzel-4{ background:#f2ecc8; }
+.rapunzel-5{ background:#ede5b5; }
 
+.shop-intro{
+  padding:60px 40px 20px;
+  text-align:center;
+}
+
+.shop-intro h2{
+  font-family:'Playfair Display',serif;
+  font-size:40px;
+  color:#3d1f4f;
+  margin-bottom:10px;
+}
+
+.shop-intro p{
+  color:#888;
+  font-size:14px;
+  max-width:600px;
+  margin:0 auto;
+}
+
+.dress-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:24px;
+  padding:30px 40px 70px;
+}
+
+.dress-card{
+  border:1px solid #eee;
+  background:#fff;
+  display:flex;
+  flex-direction:column;
+}
+
+.dress-img{
+  position:relative;
+  height:360px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.dress-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 0.4s;
+}
+
+.dress-card:hover .dress-img img{
+  transform:scale(1.05);
+}
+
+.quick-add{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:12px;
+  background:#3d1f4f;
+  color:#fff;
+  border:none;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transform:translateY(100%);
+  transition:transform 0.3s;
+  font-family:'DM Sans',sans-serif;
+}
+
+.dress-card:hover .quick-add{
+  transform:translateY(0);
+}
+
+.quick-add:hover{
+  background:#7c4d8a;
+}
+
+.dress-info{
+  padding:14px 16px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.dress-princess{
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#c9a96e;
+}
+
+.dress-info h3{
+  font-family:'Playfair Display',serif;
+  font-size:15px;
+  color:#2a1a35;
+  margin:0;
+}
+
+.dress-price{
+  font-size:13px;
+  color:#3d1f4f;
+  font-weight:500;
+}
 footer{
   background:#2a1a35;
   color:#fff;
